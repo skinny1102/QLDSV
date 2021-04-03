@@ -41,6 +41,7 @@ namespace QLDSV
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pf.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -129,7 +130,8 @@ namespace QLDSV
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminToolStripMenuItem,
-            this.thôngTinTàiKhoảnToolStripMenuItem});
+            this.thôngTinTàiKhoảnToolStripMenuItem,
+            this.baToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1429, 28);
@@ -153,9 +155,16 @@ namespace QLDSV
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // baToolStripMenuItem
+            // 
+            this.baToolStripMenuItem.Name = "baToolStripMenuItem";
+            this.baToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.baToolStripMenuItem.Text = "Báo Cáo";
+            this.baToolStripMenuItem.Click += new System.EventHandler(this.baToolStripMenuItem_Click);
             // 
             // ftableQl
             // 
@@ -191,5 +200,6 @@ namespace QLDSV
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ToolStripMenuItem baToolStripMenuItem;
     }
 }

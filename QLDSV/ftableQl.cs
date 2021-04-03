@@ -16,6 +16,7 @@ namespace QLDSV
         FormGV f2;
         FormDiem f3;
         FormLTC f4;
+        Baocao f5;
         public ftableQl()
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace QLDSV
             f4.TopLevel = false;
             f4.Dock = DockStyle.Fill;
             this.pan.Controls.Add(f4);
+            f5 = new Baocao();
+            f5.TopLevel = false;
+            f5.Dock = DockStyle.Fill;
+            this.pan.Controls.Add(f5);
+
 
 
         }
@@ -45,6 +51,7 @@ namespace QLDSV
             f2.Hide();
             f3.Hide();
             f4.Hide();
+            f5.Hide();
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
@@ -86,6 +93,13 @@ namespace QLDSV
         private void ftableQl_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void baToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            hideAllFrom();
+            f5.Show();
         }
     }
 }
