@@ -72,6 +72,12 @@
       <DependentUpon>DSbaocaolopHC.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DSDiemLopTC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDiemLopTC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,10 @@
     <EmbeddedResource Include="DSbaocaolopHC.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DSbaocaolopHC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSDiemLopTC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DSDiemLopTC.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDiem.resx">
       <DependentUpon>FormDiem.cs</DependentUpon>

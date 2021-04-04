@@ -53,5 +53,10 @@ namespace QLDSV
 
             }    
         }
+
+        private void btndiemtc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
