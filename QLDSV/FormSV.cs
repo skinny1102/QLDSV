@@ -455,6 +455,32 @@ namespace QLDSV
                 }
             }
 
+            //tim theo lop hanh chinh
+            else if(txtsearchMaSV.Text.Trim() == "" && txtsearchName.Text.Trim() == "" && txtsearchLopHC.Text.Trim()!="")
+            {
+                string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
+                                    from tblSinhVien
+                                    where MaLopHch like N'" + txtsearchLopHC.Text + "%' ";
+                using (SqlConnection cnn = new SqlConnection(strcon))
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = new SqlCommand(tim_sql, cnn);
+                    DataTable tb = new DataTable();
+                    sda.Fill(tb);
+                    if (tb.Rows.Count >= 1)
+                    {
+                        DSSV.DataSource = tb;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có kết quả trùng khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                }
+            }
+
             else if (txtsearchMaSV.Text.Trim() == ""  && txtsearchName.Text.Trim() == "")
             {
                 MessageBox.Show("Không được để tên hoặc mã trống");

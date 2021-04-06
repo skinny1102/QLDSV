@@ -51,12 +51,42 @@ namespace QLDSV
                                                           //và thêm phương thức get/set của CrystalReportViewer1
                 bc.ShowDialog();
 
-            }    
+            }
         }
 
         private void btndiemtc_Click(object sender, EventArgs e)
         {
+            if (txtMalopTC.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã lớp tín chỉ không được để trống!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                DataTable tb = new DataTable();
 
+                using (SqlConnection cnn = new SqlConnection(strcon))
+                {
+                    using (SqlCommand cmd = new SqlCommand("dsSVlopTC", cnn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@maloptc", txtLopHC.Text.Trim());
+                        using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                        {
+
+                            ad.Fill(tb);
+
+                        }
+                    }
+                }
+                DSDiemLopTC ds = new DSDiemLopTC();
+                ds.SetDataSource(tb);
+                Inbaocao bc = new Inbaocao();
+                bc.CrystalReportViewer1.ReportSource = ds;//để có thể truy cập biến CrystalReportViewer1 trong InBaoCao.cs thì phải vào InBaoCao.Designer.cs 
+                                                          //và thêm phương thức get/set của CrystalReportViewer1
+                bc.ShowDialog();
+
+            }
         }
     }
 }

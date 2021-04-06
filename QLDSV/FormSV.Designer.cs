@@ -325,7 +325,7 @@ namespace QLDSV
             // 
             this.button3.Location = new System.Drawing.Point(309, 144);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 42);
+            this.button3.Size = new System.Drawing.Size(97, 45);
             this.button3.TabIndex = 11;
             this.button3.Text = "Hiện Tất Cả";
             this.button3.UseVisualStyleBackColor = true;
@@ -335,7 +335,7 @@ namespace QLDSV
             // 
             this.button2.Location = new System.Drawing.Point(309, 96);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 42);
+            this.button2.Size = new System.Drawing.Size(97, 42);
             this.button2.TabIndex = 10;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
@@ -345,7 +345,7 @@ namespace QLDSV
             // 
             this.btnsearch.Location = new System.Drawing.Point(309, 50);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(73, 42);
+            this.btnsearch.Size = new System.Drawing.Size(97, 42);
             this.btnsearch.TabIndex = 9;
             this.btnsearch.Text = "Tìm";
             this.btnsearch.UseVisualStyleBackColor = true;
