@@ -66,6 +66,12 @@
       <DependentUpon>Baocao.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectString.cs" />
+    <Compile Include="DSLoptinchiHK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSLoptinchiHK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DSbaocaolopHC.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +133,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Baocao.resx">
       <DependentUpon>Baocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSLoptinchiHK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DSLoptinchiHK.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DSbaocaolopHC.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

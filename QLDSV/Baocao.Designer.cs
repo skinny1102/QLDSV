@@ -38,6 +38,10 @@ namespace QLDSV
             this.label5 = new System.Windows.Forms.Label();
             this.txtMalopTC = new System.Windows.Forms.TextBox();
             this.btndiemtc = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btntchk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -99,7 +103,7 @@ namespace QLDSV
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 253);
+            this.label5.Location = new System.Drawing.Point(90, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 6;
@@ -122,11 +126,55 @@ namespace QLDSV
             this.btndiemtc.UseVisualStyleBackColor = true;
             this.btndiemtc.Click += new System.EventHandler(this.btndiemtc_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(39, 350);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(221, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Danh sách lớp tín chỉ theo kì";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(90, 386);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Kì học";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Kỳ 1",
+            "Kỳ 2"});
+            this.comboBox1.Location = new System.Drawing.Point(164, 386);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // btntchk
+            // 
+            this.btntchk.Location = new System.Drawing.Point(164, 428);
+            this.btntchk.Name = "btntchk";
+            this.btntchk.Size = new System.Drawing.Size(128, 38);
+            this.btntchk.TabIndex = 12;
+            this.btntchk.Text = "Xuất báo cáo";
+            this.btntchk.UseVisualStyleBackColor = true;
+            this.btntchk.Click += new System.EventHandler(this.btntchk_Click);
+            // 
             // Baocao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 730);
+            this.Controls.Add(this.btntchk);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btndiemtc);
             this.Controls.Add(this.txtMalopTC);
             this.Controls.Add(this.label5);
@@ -154,5 +202,9 @@ namespace QLDSV
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMalopTC;
         private System.Windows.Forms.Button btndiemtc;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btntchk;
     }
 }

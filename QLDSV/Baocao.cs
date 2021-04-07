@@ -70,7 +70,7 @@ namespace QLDSV
                     using (SqlCommand cmd = new SqlCommand("dsSVlopTC", cnn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@maloptc", txtLopHC.Text.Trim());
+                        cmd.Parameters.AddWithValue("@maloptc", txtMalopTC.Text.Trim());
                         using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
                         {
 
@@ -87,6 +87,32 @@ namespace QLDSV
                 bc.ShowDialog();
 
             }
+        }
+
+        private void btntchk_Click(object sender, EventArgs e)
+        {
+            DataTable tb = new DataTable();
+
+            using (SqlConnection cnn = new SqlConnection(strcon))
+            {
+                using (SqlCommand cmd = new SqlCommand("DSTCHK", cnn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@hocki", comboBox1.Text.Trim());
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+
+                        ad.Fill(tb);
+
+                    }
+                }
+            }
+            DSLoptinchiHK ds = new DSLoptinchiHK();
+            ds.SetDataSource(tb);
+            Inbaocao bc = new Inbaocao();
+            bc.CrystalReportViewer1.ReportSource = ds;//để có thể truy cập biến CrystalReportViewer1 trong InBaoCao.cs thì phải vào InBaoCao.Designer.cs 
+                                                      //và thêm phương thức get/set của CrystalReportViewer1
+            bc.ShowDialog();
         }
     }
 }

@@ -277,7 +277,7 @@ namespace QLDSV
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 17);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Đại Chỉ";
+            this.label9.Text = "Địa Chỉ";
             // 
             // txtname
             // 
