@@ -91,6 +91,7 @@ namespace QLDSV
             txtDCH.Text = DSD.CurrentRow.Cells["DiemChuyencan"].Value.ToString().Trim();
             txtDGK.Text = DSD.CurrentRow.Cells["Diemgiuaky"].Value.ToString().Trim();
             txtDT.Text = DSD.CurrentRow.Cells["Diemthi"].Value.ToString().Trim();
+            txtDTB.Text = "";
             try
             {
                 double dch = Convert.ToDouble(txtDCH.Text);
@@ -98,7 +99,6 @@ namespace QLDSV
                 double dt = Convert.ToDouble(txtDT.Text);
                 double dtb;
                 dtb = (dch * 0.1) + (dgk * 0.2) + (dt * 0.7);
-
                 txtDTB.Text = dtb.ToString();
             }
             catch (Exception)

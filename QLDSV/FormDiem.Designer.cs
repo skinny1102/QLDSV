@@ -48,7 +48,6 @@ namespace QLDSV
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnDadd = new System.Windows.Forms.Button();
             this.btnDsua = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnDdelete = new System.Windows.Forms.Button();
@@ -230,18 +229,9 @@ namespace QLDSV
             this.label11.TabIndex = 46;
             this.label11.Text = "Điểm thi";
             // 
-            // btnDadd
-            // 
-            this.btnDadd.Location = new System.Drawing.Point(36, 600);
-            this.btnDadd.Name = "btnDadd";
-            this.btnDadd.Size = new System.Drawing.Size(75, 40);
-            this.btnDadd.TabIndex = 47;
-            this.btnDadd.Text = "Thêm";
-            this.btnDadd.UseVisualStyleBackColor = true;
-            // 
             // btnDsua
             // 
-            this.btnDsua.Location = new System.Drawing.Point(159, 591);
+            this.btnDsua.Location = new System.Drawing.Point(95, 599);
             this.btnDsua.Name = "btnDsua";
             this.btnDsua.Size = new System.Drawing.Size(75, 40);
             this.btnDsua.TabIndex = 48;
@@ -255,13 +245,13 @@ namespace QLDSV
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 44);
             this.btnclear.TabIndex = 49;
-            this.btnclear.Text = "Clear";
+            this.btnclear.Text = "Làm Mới";
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btnDdelete
             // 
-            this.btnDdelete.Location = new System.Drawing.Point(159, 665);
+            this.btnDdelete.Location = new System.Drawing.Point(159, 661);
             this.btnDdelete.Name = "btnDdelete";
             this.btnDdelete.Size = new System.Drawing.Size(75, 40);
             this.btnDdelete.TabIndex = 50;
@@ -354,7 +344,6 @@ namespace QLDSV
             this.Controls.Add(this.btnDdelete);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnDsua);
-            this.Controls.Add(this.btnDadd);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -404,7 +393,6 @@ namespace QLDSV
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnDadd;
         private System.Windows.Forms.Button btnDsua;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnDdelete;

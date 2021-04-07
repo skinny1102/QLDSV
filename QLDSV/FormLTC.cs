@@ -54,7 +54,7 @@ namespace QLDSV
                 }
             }
         }
-        void loadmon()
+        public void loadmon()
         {
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
@@ -74,8 +74,6 @@ namespace QLDSV
 
                 }
             }
-
-
         }
         void loadgv()
         {
@@ -120,9 +118,10 @@ namespace QLDSV
             cbbtenmon.Enabled = false;
             button1.Enabled = true;
             button3.Enabled = true;
-
+            txtMASV.Enabled = false;
+            btnAdd.Enabled = false;
             //button2.Enabled = true;
-           btnaddlop.Enabled = false;
+            btnaddlop.Enabled = false;
             loadsvv();
     
     }
@@ -233,24 +232,20 @@ namespace QLDSV
 
         private void btnaddlop_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(strcon))
-                 
-            using ( SqlCommand cmd = new SqlCommand())
-            {
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandType= System.Data.CommandType.StoredProcedure;
-                cmd.CommandText = "themmon";
-                cmd.Parameters.AddWithValue("@malop", txtMAM.Text);
-                cmd.Parameters.AddWithValue("@tenmon", cbbtenmon.SelectedValue);
-                cmd.Parameters.AddWithValue("@tengiangvien", cbbGV.SelectedValue);
-                cmd.Parameters.AddWithValue("@tenki", txtkihoc.Text);
-                cmd.Parameters.AddWithValue("@namho", txtNamhoc.Text);
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0) Console.WriteLine("Da them duoc");
-                else Console.WriteLine("Chua them duoc");
+            themlop f;
+            f = new themlop();
+            f.ShowDialog();
+        }
 
-            }    
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnaddlop.Enabled = true ;
+            txtMAM.Text = string.Empty;
+            txtkihoc.Text = string.Empty;
+            txtNamhoc.Text = string.Empty;
+            txtMSL.Text = string.Empty;
+           
+            loaddsmon();
         }
     }
 }

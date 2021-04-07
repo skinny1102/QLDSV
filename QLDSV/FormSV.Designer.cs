@@ -124,7 +124,7 @@ namespace QLDSV
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 40);
             this.btnclear.TabIndex = 34;
-            this.btnclear.Text = "Clear";
+            this.btnclear.Text = "Làm Mới";
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 

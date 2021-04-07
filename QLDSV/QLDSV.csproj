@@ -128,6 +128,12 @@
     <Compile Include="FormSV.Designer.cs">
       <DependentUpon>FormSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="themlop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themlop.Designer.cs">
+      <DependentUpon>themlop.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Addsvl.resx">
       <DependentUpon>Addsvl.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +181,9 @@
     </Compile>
     <EmbeddedResource Include="FormSV.resx">
       <DependentUpon>FormSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themlop.resx">
+      <DependentUpon>themlop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

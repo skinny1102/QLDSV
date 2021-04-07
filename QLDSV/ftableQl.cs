@@ -15,7 +15,7 @@ namespace QLDSV
         FormSV f1;
         FormGV f2;
         FormDiem f3;
-        FormLTC f4;
+      public  FormLTC f4;
         Baocao f5;
         public ftableQl()
         {

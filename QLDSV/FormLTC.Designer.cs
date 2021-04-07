@@ -52,6 +52,7 @@ namespace QLDSV
             this.txtkihoc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNamhoc = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DSM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSMM)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +131,7 @@ namespace QLDSV
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(129, 202);
+            this.button1.Location = new System.Drawing.Point(206, 202);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 9;
@@ -175,7 +176,7 @@ namespace QLDSV
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(220, 202);
+            this.button3.Location = new System.Drawing.Point(312, 202);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 27);
             this.button3.TabIndex = 15;
@@ -259,11 +260,22 @@ namespace QLDSV
             this.txtNamhoc.Size = new System.Drawing.Size(123, 22);
             this.txtNamhoc.TabIndex = 26;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(125, 206);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Làm Mới";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormLTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 777);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtNamhoc);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtkihoc);
@@ -322,5 +334,6 @@ namespace QLDSV
         private System.Windows.Forms.TextBox txtkihoc;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNamhoc;
+        private System.Windows.Forms.Button button2;
     }
 }
