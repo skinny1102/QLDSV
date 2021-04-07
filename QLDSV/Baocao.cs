@@ -91,28 +91,37 @@ namespace QLDSV
 
         private void btntchk_Click(object sender, EventArgs e)
         {
-            DataTable tb = new DataTable();
-
-            using (SqlConnection cnn = new SqlConnection(strcon))
+            if (cbbhocki.Text.Trim() == "" || cbbNamhoc.Text.Trim()=="")
             {
-                using (SqlCommand cmd = new SqlCommand("DSTCHK", cnn))
+                MessageBox.Show("Không được để trống học kì và năm học!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                DataTable tb = new DataTable();
+
+                using (SqlConnection cnn = new SqlConnection(strcon))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@hocki", comboBox1.Text.Trim());
-                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    using (SqlCommand cmd = new SqlCommand("DSTCHK", cnn))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@hocki", cbbhocki.Text.Trim());
+                        cmd.Parameters.AddWithValue("@namhoc", cbbNamhoc.Text.Trim());
+                        using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                        {
 
-                        ad.Fill(tb);
+                            ad.Fill(tb);
 
+                        }
                     }
                 }
+                DSLoptinchiHK ds = new DSLoptinchiHK();
+                ds.SetDataSource(tb);
+                Inbaocao bc = new Inbaocao();
+                bc.CrystalReportViewer1.ReportSource = ds;//để có thể truy cập biến CrystalReportViewer1 trong InBaoCao.cs thì phải vào InBaoCao.Designer.cs 
+                                                          //và thêm phương thức get/set của CrystalReportViewer1
+                bc.ShowDialog();
             }
-            DSLoptinchiHK ds = new DSLoptinchiHK();
-            ds.SetDataSource(tb);
-            Inbaocao bc = new Inbaocao();
-            bc.CrystalReportViewer1.ReportSource = ds;//để có thể truy cập biến CrystalReportViewer1 trong InBaoCao.cs thì phải vào InBaoCao.Designer.cs 
-                                                      //và thêm phương thức get/set của CrystalReportViewer1
-            bc.ShowDialog();
         }
     }
 }
