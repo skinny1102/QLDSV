@@ -91,6 +91,7 @@ namespace QLDSV
             txtDCH.Text = DSD.CurrentRow.Cells["DiemChuyencan"].Value.ToString().Trim();
             txtDGK.Text = DSD.CurrentRow.Cells["Diemgiuaky"].Value.ToString().Trim();
             txtDT.Text = DSD.CurrentRow.Cells["Diemthi"].Value.ToString().Trim();
+            txtloptc.Text= DSD.CurrentRow.Cells["MaLopTC"].Value.ToString().Trim();
             txtDTB.Text = "";
             try
             {
@@ -118,9 +119,9 @@ namespace QLDSV
             }
             try
             {
-                float dch = Convert.ToInt64(txtDCH.Text);
-                float dgk = Convert.ToInt64(txtDGK.Text);
-                float dt = Convert.ToInt64(txtDT.Text);
+                double dch = Convert.ToDouble(txtDCH.Text);
+                double dgk = Convert.ToDouble(txtDGK.Text);
+                double dt = Convert.ToDouble(txtDT.Text);
                 if (dch < 0 || dgk < 0 || dt < 0)
                 {
                     MessageBox.Show(" Điểm Không được âm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -163,13 +164,49 @@ namespace QLDSV
                 }
             }
         }
+
+        void loaddiem1()
+        {
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            using (SqlCommand cmd = new SqlCommand("select *from diemloptc where MaLopTC ='" + txtloptc.Text + "' and MaSV = '" + txtDmaSV.Text + "' ", con))
+            {
+                cmd.CommandType = CommandType.Text;
+                using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
+                {
+                    DataTable tb = new DataTable();
+                    ada.Fill(tb);
+                    {
+                        DSD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        DSD.DataSource = tb;
+                        DSD.Columns[0].HeaderText = "Mã Lớp Tín Chỉ";
+                        DSD.Columns[1].HeaderText = "Mã SV";
+                        DSD.Columns[2].HeaderText = "Họ Tên";
+                        DSD.Columns[3].HeaderText = "Lớp HC";
+                        DSD.Columns[4].HeaderText = " Điểm chuyên cần";
+                        DSD.Columns[5].HeaderText = "Điểm giữa kì";
+                        DSD.Columns[6].HeaderText = "Điểm thi";
+                        DSD.ReadOnly = true;
+                    }
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
         private void btnDsua_Click(object sender, EventArgs e)
         {
             if (kiemtradl() == false)
                 return;
             else
             {
-                string query = "update diemloptc set DiemChuyencan =" + txtDCH.Text + "where MaLopTC ='" + cbbLHC.Text + "' and MaSV = '" + txtDmaSV.Text + "'";
+                string query = "update diemloptc set DiemChuyencan =" + txtDCH.Text + " , Diemgiuaky ="+ txtDGK.Text+ " , Diemthi =" + txtDGK.Text + " where MaLopTC ='" + txtloptc.Text+ "' and MaSV = '" + txtDmaSV.Text + "'";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     cnn.Open();
@@ -178,20 +215,15 @@ namespace QLDSV
                     if(i>0)
                     {
                         MessageBox.Show("Sửa Thành Công");
+                        loaddiem1();
+                       
                     }   
                     else
                     {
                         MessageBox.Show("Sửa Thất Bại");
                     }    
-                    loaddiem();
-
-
                     
-                }    
-
-
-
-
+                }
             }
 
         }

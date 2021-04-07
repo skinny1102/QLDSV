@@ -299,7 +299,7 @@ namespace QLDSV
             {
                 string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
                                     from tblSinhVien 
-                                    where NameSV like N'" + txtsearchName.Text + "%' and MaSV like'" + txtsearchMaSV.Text + "%' ";
+                                    where NameSV like N'%" + txtsearchName.Text + "%' and MaSV like'" + txtsearchMaSV.Text + "%' ";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -354,7 +354,7 @@ namespace QLDSV
 
                 string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
                                     from tblSinhVien 
-                                    where NameSV like N'" + txtsearchName.Text + "%' and MaSV like'" + txtsearchMaSV.Text + "%' and MaLopHCh like '" + txtsearchLopHC + "%'";
+                                    where NameSV like N'%" + txtsearchName.Text + "%' and MaSV like'" + txtsearchMaSV.Text + "%' and MaLopHCh like '" + txtsearchLopHC + "%'";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -382,7 +382,7 @@ namespace QLDSV
 
                 string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
                                     from tblSinhVien
-                                    where NameSV like N'"+txtsearchName.Text+"%' ";
+                                    where NameSV like N'%"+txtsearchName.Text+"%' ";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -408,7 +408,7 @@ namespace QLDSV
 
                 string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
                                     from tblSinhVien
-                                    where NameSV like N'" + txtsearchName.Text + "%' and MaSV like N'" + txtsearchMaSV.Text + "%' ";
+                                    where NameSV like N'%" + txtsearchName.Text + "%' and MaSV like N'" + txtsearchMaSV.Text + "%' ";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -434,7 +434,7 @@ namespace QLDSV
 
                 string tim_sql = @"select MaSV,NameSV,NgaySinhSV,GioiTinhSV,DiachiSV,SodienthoaiSV,EmailSV,MaLopHCh
                                     from tblSinhVien
-                                    where MaLopHch like N'" + txtsearchLopHC.Text + "%' and NameSV like N'" + txtsearchName.Text + "%' ";
+                                    where MaLopHch like N'" + txtsearchLopHC.Text + "%' and NameSV like N'%" + txtsearchName.Text + "%' ";
                 using (SqlConnection cnn = new SqlConnection(strcon))
                 {
                     SqlDataAdapter sda = new SqlDataAdapter();

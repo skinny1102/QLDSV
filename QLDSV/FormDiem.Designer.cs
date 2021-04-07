@@ -59,6 +59,9 @@ namespace QLDSV
             this.label14 = new System.Windows.Forms.Label();
             this.txtmasvtensv = new System.Windows.Forms.TextBox();
             this.btnAdd2 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtloptc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DSD)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,21 +168,21 @@ namespace QLDSV
             // 
             // txtDCH
             // 
-            this.txtDCH.Location = new System.Drawing.Point(159, 435);
+            this.txtDCH.Location = new System.Drawing.Point(159, 474);
             this.txtDCH.Name = "txtDCH";
             this.txtDCH.Size = new System.Drawing.Size(145, 22);
             this.txtDCH.TabIndex = 39;
             // 
             // txtDGK
             // 
-            this.txtDGK.Location = new System.Drawing.Point(159, 479);
+            this.txtDGK.Location = new System.Drawing.Point(159, 518);
             this.txtDGK.Name = "txtDGK";
             this.txtDGK.Size = new System.Drawing.Size(145, 22);
             this.txtDGK.TabIndex = 40;
             // 
             // txtDT
             // 
-            this.txtDT.Location = new System.Drawing.Point(159, 519);
+            this.txtDT.Location = new System.Drawing.Point(159, 558);
             this.txtDT.Name = "txtDT";
             this.txtDT.Size = new System.Drawing.Size(145, 22);
             this.txtDT.TabIndex = 41;
@@ -205,7 +208,7 @@ namespace QLDSV
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 435);
+            this.label9.Location = new System.Drawing.Point(20, 474);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 17);
             this.label9.TabIndex = 44;
@@ -214,7 +217,7 @@ namespace QLDSV
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 482);
+            this.label10.Location = new System.Drawing.Point(20, 521);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 17);
             this.label10.TabIndex = 45;
@@ -223,7 +226,7 @@ namespace QLDSV
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 524);
+            this.label11.Location = new System.Drawing.Point(20, 563);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 17);
             this.label11.TabIndex = 46;
@@ -231,7 +234,7 @@ namespace QLDSV
             // 
             // btnDsua
             // 
-            this.btnDsua.Location = new System.Drawing.Point(95, 599);
+            this.btnDsua.Location = new System.Drawing.Point(95, 638);
             this.btnDsua.Name = "btnDsua";
             this.btnDsua.Size = new System.Drawing.Size(75, 40);
             this.btnDsua.TabIndex = 48;
@@ -241,7 +244,7 @@ namespace QLDSV
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(36, 661);
+            this.btnclear.Location = new System.Drawing.Point(36, 700);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 44);
             this.btnclear.TabIndex = 49;
@@ -251,7 +254,7 @@ namespace QLDSV
             // 
             // btnDdelete
             // 
-            this.btnDdelete.Location = new System.Drawing.Point(159, 661);
+            this.btnDdelete.Location = new System.Drawing.Point(159, 700);
             this.btnDdelete.Name = "btnDdelete";
             this.btnDdelete.Size = new System.Drawing.Size(75, 40);
             this.btnDdelete.TabIndex = 50;
@@ -278,7 +281,7 @@ namespace QLDSV
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(20, 556);
+            this.label13.Location = new System.Drawing.Point(20, 595);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 17);
             this.label13.TabIndex = 53;
@@ -286,7 +289,7 @@ namespace QLDSV
             // 
             // txtDTB
             // 
-            this.txtDTB.Location = new System.Drawing.Point(159, 551);
+            this.txtDTB.Location = new System.Drawing.Point(159, 590);
             this.txtDTB.Name = "txtDTB";
             this.txtDTB.ReadOnly = true;
             this.txtDTB.Size = new System.Drawing.Size(145, 22);
@@ -328,11 +331,40 @@ namespace QLDSV
             this.btnAdd2.UseVisualStyleBackColor = true;
             this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(20, 420);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 17);
+            this.label15.TabIndex = 59;
+            this.label15.Text = "Lớp Tín chỉ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(20, 447);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 17);
+            this.label16.TabIndex = 60;
+            this.label16.Text = "Tên Môn:";
+            // 
+            // txtloptc
+            // 
+            this.txtloptc.Enabled = false;
+            this.txtloptc.Location = new System.Drawing.Point(134, 420);
+            this.txtloptc.Name = "txtloptc";
+            this.txtloptc.Size = new System.Drawing.Size(170, 22);
+            this.txtloptc.TabIndex = 61;
+            // 
             // FormDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 777);
+            this.Controls.Add(this.txtloptc);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.btnAdd2);
             this.Controls.Add(this.txtmasvtensv);
             this.Controls.Add(this.label14);
@@ -404,5 +436,8 @@ namespace QLDSV
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtmasvtensv;
         private System.Windows.Forms.Button btnAdd2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtloptc;
     }
 }
