@@ -61,7 +61,7 @@ namespace QLDSV
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

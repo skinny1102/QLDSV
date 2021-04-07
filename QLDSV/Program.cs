@@ -16,7 +16,7 @@ namespace QLDSV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ftableQl());
+            Application.Run(new Login());
         }
     }
 }

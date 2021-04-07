@@ -34,11 +34,9 @@ namespace QLDSV
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +66,6 @@ namespace QLDSV
             // 
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(1224, 0);
@@ -78,7 +75,7 @@ namespace QLDSV
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 301);
+            this.button6.Location = new System.Drawing.Point(12, 228);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(190, 73);
             this.button6.TabIndex = 19;
@@ -88,22 +85,13 @@ namespace QLDSV
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 222);
+            this.button5.Location = new System.Drawing.Point(12, 149);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(190, 73);
             this.button5.TabIndex = 18;
             this.button5.Text = "Lớp Tín Chỉ";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(13, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 67);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Lớp ";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -129,7 +117,6 @@ namespace QLDSV
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adminToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem,
             this.baToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -137,12 +124,6 @@ namespace QLDSV
             this.menuStrip1.Size = new System.Drawing.Size(1429, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // adminToolStripMenuItem
-            // 
-            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
-            this.adminToolStripMenuItem.Text = "Admin";
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -190,14 +171,12 @@ namespace QLDSV
 
         private System.Windows.Forms.Panel pf;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pan;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripMenuItem baToolStripMenuItem;

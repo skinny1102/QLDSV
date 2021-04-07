@@ -123,5 +123,27 @@ namespace QLDSV
                 bc.ShowDialog();
             }
         }
+
+        private void btnXuatDSDiemLopHC_Click(object sender, EventArgs e)
+        {
+            if (tbNamHoc_DSDiemLopHC.Text.Trim() == "")
+            {
+                MessageBox.Show("Năm học không được để trống!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (tbMaLop_DSDiemLopHc.Text.Trim() == "")
+            {
+                MessageBox.Show("Mã lớp không được để trống!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
+        }
+
+        private void Baocao_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

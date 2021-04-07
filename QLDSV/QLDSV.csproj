@@ -66,6 +66,17 @@
       <DependentUpon>Baocao.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectString.cs" />
+    <Compile Include="DataSetQldiemSV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQldiemSV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSdiemlopHC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSdiemlopHC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DSLoptinchiHK.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -140,6 +151,10 @@
     <EmbeddedResource Include="Baocao.resx">
       <DependentUpon>Baocao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DSdiemlopHC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DSdiemlopHC.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DSLoptinchiHK.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DSLoptinchiHK.cs</LastGenOutput>
@@ -185,6 +200,17 @@
     <EmbeddedResource Include="themlop.resx">
       <DependentUpon>themlop.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetQldiemSV.xsc">
+      <DependentUpon>DataSetQldiemSV.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQldiemSV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQldiemSV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetQldiemSV.xss">
+      <DependentUpon>DataSetQldiemSV.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
