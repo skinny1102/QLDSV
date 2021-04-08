@@ -10,7 +10,7 @@ namespace QLDSV
     {
         public static string GetConnectionString()
         {
-            return @"Data Source=DESKTOP-JF21J25;Initial Catalog=QLDSV;Integrated Security=True";
+            return @"Data Source=DESKTOP;Initial Catalog=QLDSV;Integrated Security=True";
         }
     }
 }
