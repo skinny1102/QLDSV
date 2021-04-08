@@ -25,7 +25,7 @@ namespace QLDSV
             Load_datasv();
             Load_dataLHC();
             btnSua.Enabled = false;
-            btnXoa.Enabled = false;
+            //btnXoa.Enabled = false;
         }
         void Load_datasv()
         {
@@ -208,7 +208,7 @@ namespace QLDSV
             else radioButton2.Checked = true;
             btnAdd.Enabled = false;
             btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+            //btnXoa.Enabled = true;
             //refresh();
 
         }
@@ -508,7 +508,7 @@ namespace QLDSV
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             btnAdd.Enabled = true;
-            btnXoa.Enabled = false;
+            //btnXoa.Enabled = false;
             btnSua.Enabled = false;
         }
 
@@ -516,34 +516,34 @@ namespace QLDSV
         {
             Load_datasv();
         }
+        // XÓA SINH VIÊN
+        //private void btnxoa_click(object sender, eventargs e)
+        //{
+        //    dialogresult kq = messagebox.show("bạn có muốn xóa không?", "thong bao", messageboxbuttons.yesnocancel, messageboxicon.question);
+        //    if (kq == dialogresult.yes)
+        //    {
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            DialogResult kq = MessageBox.Show("Bạn có muốn xóa không?", "Thong bao", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (kq == DialogResult.Yes)
-            {
+        //        using (sqlconnection cnn = new sqlconnection(strcon))
+        //        {
+        //            string query = @"delete from tblsinhvien where masv=n'" + txtmasv.text.trim() + "'";
+        //            using (sqlcommand cmd = new sqlcommand(query, cnn))
+        //            {
+        //                cmd.commandtype = commandtype.text;
+        //                cnn.open();
+        //                cmd.executenonquery();
+        //                load_datasv();
+        //                txtmasv.text = string.empty;
+        //                txtname.text = string.empty;
+        //                txtemail.text = string.empty;
+        //                txtdiachi.text = string.empty;
+        //                txtsdt.text = string.empty;
+        //                txtngaysinh.text = string.empty;
+        //                radiobutton1.checked = false;
+        //                radiobutton2.checked = false;
 
-                using (SqlConnection cnn = new SqlConnection(strcon))
-                {
-                    string query = @"delete from tblSinhVien where MaSV=N'" + txtMaSV.Text.Trim() + "'";
-                    using (SqlCommand cmd = new SqlCommand(query, cnn))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cnn.Open();
-                        cmd.ExecuteNonQuery();
-                        Load_datasv();
-                        txtMaSV.Text = string.Empty;
-                        txtname.Text = string.Empty;
-                        txtemail.Text = string.Empty;
-                        txtDiachi.Text = string.Empty;
-                        txtSDT.Text = string.Empty;
-                        txtNgaysinh.Text = string.Empty;
-                        radioButton1.Checked = false;
-                        radioButton2.Checked = false;
-
-                    }
-                }
-            }
-        }
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

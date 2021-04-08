@@ -298,11 +298,11 @@ namespace QLDSV
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(35, 209);
+            this.label14.Location = new System.Drawing.Point(35, 210);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 17);
+            this.label14.Size = new System.Drawing.Size(87, 17);
             this.label14.TabIndex = 56;
-            this.label14.Text = "Tên hoặc Mã sinh viên";
+            this.label14.Text = "Mã sinh viên";
             // 
             // txtmasvtensv
             // 

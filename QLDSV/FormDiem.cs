@@ -275,23 +275,24 @@ namespace QLDSV
                 DSD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 DSD.DataSource = tb;
                 }
-                else if (tb.Rows.Count < 1)
-                {
-                    string tim = @"select *from diemloptc where NameSV like N'%"+txtmasvtensv.Text +"%'";
-                    sda.SelectCommand = new SqlCommand(tim, cnn);
-                    DataTable t = new DataTable();
-                    sda.Fill(t);
-                    if (t.Rows.Count >= 1)
-                    {
-                        DSD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        DSD.DataSource = t;
-                    }
-                    else if (t.Rows.Count<1)
-                    {
-                        MessageBox.Show("Không có sinh viên trùng khớp");
-                    }    
+                // tìm theo tên sinh viên
+                //else if (tb.Rows.Count < 1)
+                //{
+                //    string tim = @"select *from diemloptc where NameSV like N'%"+txtmasvtensv.Text +"%'";
+                //    sda.SelectCommand = new SqlCommand(tim, cnn);
+                //    DataTable t = new DataTable();
+                //    sda.Fill(t);
+                //    if (t.Rows.Count >= 1)
+                //    {
+                //        DSD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //        DSD.DataSource = t;
+                //    }
+                //    else if (t.Rows.Count<1)
+                //    {
+                //        MessageBox.Show("Không có sinh viên trùng khớp");
+                //    }    
 
-                }    
+                //}    
 
 
 

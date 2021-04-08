@@ -32,7 +32,6 @@ namespace QLDSV
             this.title_formSV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnclear = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cbbLHC = new System.Windows.Forms.ComboBox();
@@ -83,7 +82,6 @@ namespace QLDSV
             // panel1
             // 
             this.panel1.Controls.Add(this.btnclear);
-            this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.cbbLHC);
@@ -120,23 +118,13 @@ namespace QLDSV
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(811, 251);
+            this.btnclear.Location = new System.Drawing.Point(693, 251);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 40);
             this.btnclear.TabIndex = 34;
             this.btnclear.Text = "Làm Mới";
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(693, 251);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 40);
-            this.btnXoa.TabIndex = 33;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -477,7 +465,6 @@ namespace QLDSV
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cbbLHC;
