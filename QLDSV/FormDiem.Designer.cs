@@ -50,7 +50,6 @@ namespace QLDSV
             this.label11 = new System.Windows.Forms.Label();
             this.btnDsua = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
-            this.btnDdelete = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDmaSV = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -234,7 +233,7 @@ namespace QLDSV
             // 
             // btnDsua
             // 
-            this.btnDsua.Location = new System.Drawing.Point(95, 638);
+            this.btnDsua.Location = new System.Drawing.Point(59, 654);
             this.btnDsua.Name = "btnDsua";
             this.btnDsua.Size = new System.Drawing.Size(75, 40);
             this.btnDsua.TabIndex = 48;
@@ -244,22 +243,13 @@ namespace QLDSV
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(36, 700);
+            this.btnclear.Location = new System.Drawing.Point(159, 654);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 44);
             this.btnclear.TabIndex = 49;
             this.btnclear.Text = "Làm Mới";
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
-            // 
-            // btnDdelete
-            // 
-            this.btnDdelete.Location = new System.Drawing.Point(159, 700);
-            this.btnDdelete.Name = "btnDdelete";
-            this.btnDdelete.Size = new System.Drawing.Size(75, 40);
-            this.btnDdelete.TabIndex = 50;
-            this.btnDdelete.Text = "Xóa";
-            this.btnDdelete.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -373,7 +363,6 @@ namespace QLDSV
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDmaSV);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnDdelete);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnDsua);
             this.Controls.Add(this.label11);
@@ -427,7 +416,6 @@ namespace QLDSV
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnDsua;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.Button btnDdelete;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtDmaSV;
         private System.Windows.Forms.Label label13;
