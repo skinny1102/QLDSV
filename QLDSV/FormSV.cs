@@ -516,7 +516,7 @@ namespace QLDSV
         {
             Load_datasv();
         }
-        // XÓA SINH VIÊN
+        // XÓA SINH VI
         //private void btnxoa_click(object sender, eventargs e)
         //{
         //    dialogresult kq = messagebox.show("bạn có muốn xóa không?", "thong bao", messageboxbuttons.yesnocancel, messageboxicon.question);
